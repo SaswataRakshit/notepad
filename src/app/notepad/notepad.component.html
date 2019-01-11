@@ -1,0 +1,22 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-12 sort">
+      <button class="btn btn-info" (click)="sort('createdOn')">sort by date</button>
+    </div>
+  </div>
+  <div class="row">
+    <li *ngFor="let notes of noteItems">
+      <a class="list-group-item clearfix" style="cursor: pointer" (click)="onSelect(notes)">
+        <div class="col-md-12">
+          <div class="float-left">
+            <h4 class="list-group-item-heading"> {{notes.title}} </h4>
+            <p class="list-group-item-text"> {{notes.description}} </p>
+            <p class="float-right"> Created on: {{notes.createdOn | date :'short'}}</p>
+          </div>
+        </div>
+      </a>
+    </li>
+  </div>
+  <button class="btn btn-primary" (click)="onClick()">Add new Note</button>
+</div>

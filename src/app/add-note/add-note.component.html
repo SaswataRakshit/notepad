@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Add a note</h3>
+  <form (ngSubmit)="onSave()" #f="ngForm">   <!-- creating a form -->
+    <div class="form-group col-md-6">
+      <label for="title">Title</label>
+      <input type="text" id="title" class="form-control" name="title" ngModel required maxlength="50" #title="ngModel"> <!-- validation is applied. field is required and max length is 50 -->
+      <span class="help-block" *ngIf="!title.valid && title.touched">Please enter a Title</span> <!-- error message is displayed if the user doesnt give any input to title -->
+    </div>
+    <div class="form-group col-md-9">
+      <label for="notes">Notes</label>
+      <textarea id="notes" class="form-control" name="notes" rows="10" [(ngModel)]="description"></textarea> <!-- this is text area where user can enter anything, no validation -->
+    </div>
+    <div class="pl-3">
+        <button class="btn btn-success" type="submit" (click)="onSave()">Save</button> <!-- save button to save the value in service -->
+    </div>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a routerLink="" class="navbar-brand">Notepad</a> <!-- this is brand icon -->
+  <!--using routerLink so that page dont reload on every click-->
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="notepad"> Notes </a> <!-- this is for first page. added some style like routerlinkActive so on select it change its color -->
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="adding"> Add Notes </a> <!-- this is for second page -->
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="details"> Note Details </a> <!-- this is for third page -->
+      </li>
+    </ul>
+  </div>
+</nav>

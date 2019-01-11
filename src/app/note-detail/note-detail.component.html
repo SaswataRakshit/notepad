@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="col-md-9">
+    <li *ngIf="notes">
+        <h4> {{notes.title | async}} </h4>
+        <p> {{notes.description | async}} </p>
+    </li>
+    <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+  </div>
+</div>
